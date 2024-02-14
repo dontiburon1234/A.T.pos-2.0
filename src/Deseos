@@ -1,0 +1,18 @@
+MEJORAS
+Documento equivalente  el artículo 3 del decreto 522 de 2003: estatuto tributario Art. 616-1. Factura o documento equivalente.
+
+niveles de inventario
+picking ubicación
+
+Cuando se cambia el cliente del domicilio no está cambiando el nombre en la lista de facturas pendientes!
+
+Milagrosamente aparece los datos de un anterior domicilio cuando la factura es nueva.
+
+
+Camnbiar en la base de datos tabla medio_pago_factura el tipo de datos tarjeta bigint a String
+
+
+x\u00E1x\u00E9x\u00EDx\u00F3x\u00FA
+
+JOptionPane.showMessageDialog(null, "Debe seleccionar un cliente o proveedor para REMISIÓN de la mercancía.", 
+								"Requerimiento de pago", JOptionPane.ERROR_MESSAGE);

@@ -1,0 +1,241 @@
+mirar que no se bloquee para abrir el cajon si no tiene
+
+En la tabla item_devolucion_venta se debe cambiar id_almacen por id_caja y agragar costo y origen_devolucion
+
+20180722 en la licencia debe estar el nombre de la impresora "impresora":"" si está vacio no imprime
+
+20180705 sinpuertas
+alter table remision add costo Numeric(20,2) not null default 0; 
+
+old old old old old old old 
+PoleDisplay se colocó en xrxt con x64 y se colocaron en el java
+
+INSERT INTO parametro(parametro, valor, descripcion, grupo, dg_fecha_accion, dg_accion)
+    VALUES ('sizeFont','10','Tamaño de la letra para la factura y los informes','facturacion',now(),'insert');
+
+
+55;"poleDisplay";"COM8";"Indica el puerto con el cual trabaja el Pole Display - Windows Administrador de dispositivos";"facturacion";"";"2018-06-21 00:00:00";"insert"
+
+mensajes de texto factura, almacen_mensaje_documento y mensaje_documento
+
+Tabla factura campo numero_impresiones integer, validar que existe.
+
+G.getInstance().licenciaGlobal.getLogoPDF();
+
+alter table cliente add fecha_exportacion timestamp
+54;"pasoRenglon";"6";"Establece la distancia entre renglones 6 minimo para impresion con logo";"facturacion";"";"2018-06-14 00:00:00";"insert"
+53;"anchoPapel";"158";"Establece el ancho del papel 2.2 (ancho del rollo en pulgadas) * 72 = 158 valor que se coloca";"facturacion";"";"2018-06-14 00:00:00";"insert"
+String strFileLogo = G.getInstance().licenciaGlobal.getLogoPDF();
+52;"impresionConLogo";"true";"Establece si la factura y reportes van con el logo de encabezado";"facturacion";"";"2018-06-13 00:00:00";"insert"
+
+alter table devolucion_venta add numero_impresiones Integer not null default 0;
+alter table devolucion_venta add costo Numeric(20,2) not null default 0;
+alter table item_devolucion_venta add costo Numeric(20,2) not null default 0;
+
+
+alter table devolucion_venta drop constraint dv_almacen_fkey;
+alter table devolucion_venta drop constraint devolucion_venta_pkey;
+alter table devolucion_venta rename column id_almacen to id_caja;
+alter table devolucion_venta add constraint devolucion_venta_pkey primary key (id_caja, numero);
+alter table item_devolucion_venta rename column id_almacen to id_caja; 
+
+
+alter table mensaje_documento add ubicacion character varying(30);
+
+alter table item_devolucion_venta add costo Numeric(20,2) not null default 0; 
+
+alter table devolucion_venta add costo Numeric(20,2) not null default 0; 
+
+alter table remision add id_cliente_proveedor integer;
+
+alter table devolucion_venta add origen_devolucion character varying(30);
+
+-- Table: item_remision
+
+-- DROP TABLE item_remision;
+
+CREATE TABLE item_remision
+(
+  id_caja integer NOT NULL,
+  numero_remision numeric(20,0) NOT NULL,
+  item integer NOT NULL,
+  id_vendedor integer,
+  id_usuario_vendedor character varying(30),
+  id_articulo integer,
+  codigo_articulo character varying(20),
+  codigo_articulo_venta character varying(20),
+  nombre_provisional character varying(60),
+  cantidad_unidad_medida numeric(10,3),
+  valor_unidad numeric(30,4),
+  valor_anterior numeric(30,4) NOT NULL DEFAULT 0,
+  id_presentacion integer,
+  cantidad_presentacion numeric(10,3),
+  valor_presentacion numeric(30,4),
+  valor_item numeric(20,2),
+  id_base_iva integer,
+  valor_iva numeric(30,10),
+  porcentaje_descuento numeric(5,2),
+  valor_descuento numeric(20,2),
+  costo numeric(20,2),
+  costo_item numeric(20,2) NOT NULL DEFAULT 0,
+  item_promocion integer,
+  cantidad_um_devuelta numeric(10,2),
+  cantidad_pres_devuelta numeric(10,2),
+  estado_exportacion character varying(30),
+  dg_fecha_accion timestamp without time zone,
+  dg_accion character varying(30)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE item_remision
+  OWNER TO postgres;
+
+
+-- Table: remision
+
+-- DROP TABLE remision;
+
+CREATE TABLE remision
+(
+  id_caja integer NOT NULL,
+  id_almacen integer,
+  numero_remision integer NOT NULL,
+  fecha timestamp without time zone,
+  id_cajero integer,
+  id_vendedor integer,
+  id_usuario_vendedor character varying(30),
+  documento numeric(20,0),
+  nombre character varying(100),
+  apellido character varying(100),
+  direccion character varying(100),
+  telefono character varying(100),
+  proveedor character varying(30),
+  valor_remision numeric(20,2),
+  valor_descuento numeric(20,2) DEFAULT 0,
+  valor_iva numeric(30,10),
+  id_prefactura integer NOT NULL DEFAULT 0,
+  numero_impresiones integer,
+  comentario text DEFAULT ''::text,
+  estado character varying(30),
+  fecha_exportacion timestamp without time zone,
+  estado_exportacion character varying(30),
+  dg_fecha_accion timestamp without time zone,
+  dg_accion character varying(30)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE remision
+  OWNER TO postgres;
+
+
+ALTER TABLE item_devolucion_venta ALTER COLUMN cantidad_unidad_medida TYPE numeric(20,3);
+
+ALTER TABLE devolucion_venta ADD COLUMN numero_impresiones integer;
+
+
+poner en false que el cajero no puede modificar el precio
+
+CREATE TABLE pagos
+(
+  id serial NOT NULL,
+  id_caja integer,
+  id_almacen integer,
+  id_proveedor integer,
+  id_cajero integer,
+  id_tipo_pago integer,
+  valor_factura numeric(20,2),
+  valor_descuento numeric(20,2),
+  valor_pagado numeric(20,2),
+  numero_factura text,
+  fechapago timestamp without time zone,
+  numero_impresiones integer,
+  comentario text,
+  estado text,
+  dg_fecha_accion timestamp without time zone,
+  dg_accion character varying(30)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE pagos
+  OWNER TO postgres;
+
+CREATE TABLE tipo_pago
+(
+  id serial NOT NULL,
+  nombre character varying(30),
+  dg_fecha_accion timestamp without time zone,
+  dg_accion character varying(30)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE tipo_pago
+  OWNER TO postgres;
+  
+INSERT INTO tipo_pago (nombre,dg_fecha_accion,dg_accion) VALUES ('MERCANCIA', '2018-01-31', 'insert');
+INSERT INTO tipo_pago (nombre,dg_fecha_accion,dg_accion) VALUES ('OTROS', '2018-01-31', 'insert');
+INSERT INTO tipo_pago (nombre,dg_fecha_accion,dg_accion) VALUES ('RETIRO', '2018-01-31', 'insert');
+
+Datos que debe tener los C:/tmp/lic/serv/BotonesRapidos.bin al iniciar
+{"arrayDatosBR":[],"titulo1":"","titulo2":"","titulo3":""}
+
+Agregar en la tabla item_factura e item_prefactura nombre largo y corto de los artículos adquiridos.
+
+Agregar un constraint a la tabla factura que oblique a tener un dato en id_prefactura unico con id_caja no puede ser 0
+
+ALTER TABLE tercero ADD COLUMN id_lista_precio integer; falta un constrain que relaciones con la tabla lista_precio_articulo
+
+ALTER TABLE cliente ADD COLUMN id_lista_precio integer; falta un constrain que relaciones con la tabla lista_precio_articulo
+
+ALTER TABLE item_prefactura ALTER COLUMN cantidad_unidad_medida TYPE numeric(10,3);
+ALTER TABLE item_prefactura ALTER COLUMN cantidad_presentacion TYPE numeric(10,3);
+
+ALTER TABLE item_factura ALTER COLUMN cantidad_unidad_medida TYPE numeric(10,3);
+ALTER TABLE item_factura ALTER COLUMN cantidad_presentacion TYPE numeric(10,3);
+
+Agregar ALTER TABLE prefactura ADD COLUMN id_tercero integer; para que se selecciones adecuadamente el tercero o cliente
+
+CREATE TABLE domicilio
+(
+  id serial NOT NULL,
+  id_cliente integer,
+  id_caja integer,
+  id_almacen integer,
+  id_factura integer,
+  id_prefactura integer NOT NULL DEFAULT 0,
+  documento numeric(20,0),
+  nombre character varying(100),
+  apellido character varying(100),
+  direccion character varying(100),
+  telefono character varying(100),
+  listado_pedido text,
+  id_domiciliario integer,
+  nombre_domiciliario text,
+  dg_fecha_accion timestamp without time zone,
+  dg_accion character varying(30)
+)
+WITH (
+  OIDS=TRUE
+);
+ALTER TABLE domicilio
+  OWNER TO postgres;
+  
+INSERT INTO medio_pago(id, nombre, estado) VALUES (7,'CREDITO', 'activo');
+
+/* este se realiza en la base de datos en escritorio y servidor */
+insert into parametro (parametro, valor, descripcion, grupo, dg_fecha_accion, dg_accion) 
+values ('codigoArticuloPagoTarjetaBasculaRed', '9999', 'Determina si imprime directamente 
+la facutra cuando esta conectada a bascula de red', 'facturacion', now(), 'insert');
+
+/* esto se haría solo en el servidor para que se sincronizara automáticamente */
+insert into pendiente_sincronizacion (id_host_origen, id_host_hijo, tabla, campo_id, 
+tipo_id, id_tabla, fecha_evento, dg_fecha_accion, dg_accion, accion) 
+values (1,2,'parametro','id','int','49',now(),now(),'insert','update');
+
+
+MEJORAS
+Documento equivalente  el artículo 3 del decreto 522 de 2003: estatuto tributario Art. 616-1. Factura o documento equivalente.
+

@@ -1,0 +1,240 @@
+Error: 200930 16:13:41Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,cliente,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarCliente(Exportador.java:844)
+		com.pos.apl.Exportador.exportar(Exportador.java:124)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:13:41Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,usuario,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarUsuario(Exportador.java:1193)
+		com.pos.apl.Exportador.exportar(Exportador.java:125)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:13:41Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,factura,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarFacturas(Exportador.java:271)
+		com.pos.apl.Exportador.exportar(Exportador.java:126)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:13:41Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,remision,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarRemision(Exportador.java:610)
+		com.pos.apl.Exportador.exportar(Exportador.java:127)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:13:42Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,devolucion_venta,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarDevolucionVenta(Exportador.java:457)
+		com.pos.apl.Exportador.exportar(Exportador.java:128)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:13:42Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,recibo_caja,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarReciboCaja(Exportador.java:734)
+		com.pos.apl.Exportador.exportar(Exportador.java:129)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:13:42Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,devolucion_caja,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarDevolucionCaja(Exportador.java:985)
+		com.pos.apl.Exportador.exportar(Exportador.java:130)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:13:42Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,redencion_documento_caja,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarRedencionDocumentoCaja(Exportador.java:1094)
+		com.pos.apl.Exportador.exportar(Exportador.java:131)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:43Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,cliente,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarCliente(Exportador.java:844)
+		com.pos.apl.Exportador.exportar(Exportador.java:124)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:43Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,usuario,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarUsuario(Exportador.java:1193)
+		com.pos.apl.Exportador.exportar(Exportador.java:125)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:43Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,factura,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarFacturas(Exportador.java:271)
+		com.pos.apl.Exportador.exportar(Exportador.java:126)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:44Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,remision,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarRemision(Exportador.java:610)
+		com.pos.apl.Exportador.exportar(Exportador.java:127)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:44Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,devolucion_venta,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarDevolucionVenta(Exportador.java:457)
+		com.pos.apl.Exportador.exportar(Exportador.java:128)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:44Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,recibo_caja,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarReciboCaja(Exportador.java:734)
+		com.pos.apl.Exportador.exportar(Exportador.java:129)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:44Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,devolucion_caja,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarDevolucionCaja(Exportador.java:985)
+		com.pos.apl.Exportador.exportar(Exportador.java:130)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+
+Error: 200930 16:18:44Error en la recuperacion de campos: select id, id_host_origen, id_host_padre, tabla, id_tabla, campo_id, tipo_id, id_tabla, fecha_evento, estado, accion from pendiente_exportacion where id_host_origen = ?  and tabla = ?  and fecha_exportacion is null order by id limit 50 offset 0  valores: 2,redencion_documento_caja,null
+	 org.postgresql.util.PSQLException: ERROR: no existe la relación «pendiente_exportacion»
+  Position: 123
+		org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2161)
+		org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1890)
+		org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:560)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:417)
+		org.postgresql.jdbc2.AbstractJdbc2Statement.executeQuery(AbstractJdbc2Statement.java:302)
+		com.pos.db.DataBase.listarTabla(DataBase.java:504)
+		com.pos.db.PendienteExportacion.listarPendienteExportacion(PendienteExportacion.java:381)
+		com.pos.apl.Exportador.exportarRedencionDocumentoCaja(Exportador.java:1094)
+		com.pos.apl.Exportador.exportar(Exportador.java:131)
+		com.pos.apl.Exportador.run(Exportador.java:109)
+

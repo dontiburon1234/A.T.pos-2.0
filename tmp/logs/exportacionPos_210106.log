@@ -1,0 +1,48 @@
+Error: 210106 12:54:31Error en la conexion a WebService
+	 java.net.ConnectException: Connection refused: connect
+		org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+		org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:154)
+		org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+		org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+		org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+		org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+		org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+		org.apache.axis.client.Call.invoke(Call.java:2767)
+		org.apache.axis.client.Call.invoke(Call.java:2443)
+		org.apache.axis.client.Call.invoke(Call.java:2366)
+		org.apache.axis.client.Call.invoke(Call.java:1812)
+		com.pos.Pos.PosWSPortBindingStubSinc.muestraEstadoSinc(PosWSPortBindingStubSinc.java:164)
+		com.pos.apl.Exportador.run(Exportador.java:56)
+
+Error: 210106 12:54:44Error en la conexion a WebService
+	 java.net.ConnectException: Connection refused: connect
+		org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+		org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:154)
+		org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+		org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+		org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+		org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+		org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+		org.apache.axis.client.Call.invoke(Call.java:2767)
+		org.apache.axis.client.Call.invoke(Call.java:2443)
+		org.apache.axis.client.Call.invoke(Call.java:2366)
+		org.apache.axis.client.Call.invoke(Call.java:1812)
+		com.pos.Pos.PosWSPortBindingStubSinc.muestraEstadoSinc(PosWSPortBindingStubSinc.java:164)
+		com.pos.apl.Exportador.run(Exportador.java:56)
+
+Error: 210106 12:56:13Error en la conexion a WebService
+	 java.net.ConnectException: Connection refused: connect
+		org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+		org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:154)
+		org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+		org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+		org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+		org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+		org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+		org.apache.axis.client.Call.invoke(Call.java:2767)
+		org.apache.axis.client.Call.invoke(Call.java:2443)
+		org.apache.axis.client.Call.invoke(Call.java:2366)
+		org.apache.axis.client.Call.invoke(Call.java:1812)
+		com.pos.Pos.PosWSPortBindingStubSinc.muestraEstadoSinc(PosWSPortBindingStubSinc.java:164)
+		com.pos.apl.Exportador.run(Exportador.java:56)
+
